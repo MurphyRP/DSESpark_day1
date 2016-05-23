@@ -5,7 +5,8 @@ We will start with loading a dataset via copy in CQL (loading with Spark will co
 1 ) Create the keyspace and table 
     https://github.com/MurphyRP/DSESpark_day1/blob/master/createKeyspace.cql
     
-2) Download a subset of the data and add to DSE/C* with the Copy command
+2) Insert a starter set of location data
+
     
 
 
