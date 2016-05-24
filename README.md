@@ -12,7 +12,7 @@ We will start with loading a dataset through simple insert statements (loading w
     
 3) Use dsetool to determine (and note) the IP (external IP) of the Master node 
 ```
-<installdir>/bin/dsetool sparkmater
+<installdir>/bin/dsetool sparkmaster
 ```
     
 4) Open the Spark-SQL shell
@@ -67,6 +67,8 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 
 ``` Describe bootcamp.us_locations ```
 
+#### Brush off your SQL - in this case SparkSQL
+
 2) How many rows are in the table?
 
 3) How many 'sites' are in 'CA'?
@@ -77,7 +79,7 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 
     You don't need this but...
 ```ruby
-select * from bootcamp.us_locations where state_alpha = 'AZ' order by elevation_in_ft desc limit 1;
+select feature_name from bootcamp.us_locations where state_alpha = 'AZ' order by elevation_in_ft desc limit 1;
 ```
 
 5) Why are you running simple Spark-SQL? Why would anyone need Spark-SQL with DSE/Cassandra?
@@ -146,6 +148,29 @@ resFull.printSchema()
     A) What is the output?
     B) Has data been retrieved from Cassandra yet? Why (yes or no)?
     
+
+9) Run
+```scala
+resFull.take(5)
+```
+    A) What is the output?
+    B) Has data been retrieved from Cassandra yet? Why (yes or no)?
+    
+10) Run
+```scala
+resFull.groupBy("state_alpha").count().show()
+```
+    A) What is the output?
+    B) What is different about this execution?
+11) Run
+```
+resFull.filter("state_alpha = 'AZ'").sort($"elevation_in_ft".desc).take(1)
+```
+Sort is an alias of group by. Spark often provides a 'sql knowledge' friendly alias but does not always provide all the functionality of the underlying function.
+
+12) What else can be done with a simple DataFrame?
+
+http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame
 
 
 
