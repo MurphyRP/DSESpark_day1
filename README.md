@@ -53,6 +53,10 @@ We will start with loading a dataset through simple insert statements (loading w
 ``` sudo <installdir>/dse spark-sql --total-executor-cores 2  --executor-memory  2G ```
 
     A) Any change to the observed behavior above?
+    
+12) When would you want to set system-wide defaults for these settings?
+
+```http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sparkCassProps.html```
 
 ## Simple data exploration
 
