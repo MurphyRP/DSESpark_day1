@@ -238,8 +238,17 @@ arizonaHighPoint.show()
     C) Why?
 
 
+## Spark submit
 
-
+1) Using WGet or SCP, pull/push the file below to your user directory on Spark (the node you are using)
+```
+https://github.com/MurphyRP/DSESpark_day1/blob/master/simplePySubmit.py
+```
+Maybe cd into your home dir and then wget?
+```
+cd
+wget https://github.com/MurphyRP/DSESpark_day1/blob/master/simplePySubmit.py
+```
 
 
 https://github.com/datastax/spark-cassandra-connector/blob/master/doc/14_data_frames.md
