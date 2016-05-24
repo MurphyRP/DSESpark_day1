@@ -217,6 +217,26 @@ arizonaHighPoint.take(1)
     B) What was the output? Was it as expected?
     C) How long did it take?
 
+7) Run
+```scala
+arizonaHighPoint.show()
+```
+
+    A) What was different?
+    B) Did it take more time or less?
+    C) If you run it again, how long does it take?
+    
+8) Run
+```
+resFull.cache()
+
+arizonaHighPoint.show()
+```
+
+    A) Execute the second command twice.
+    B) Faster or slower?
+    C) Why?
+
 
 
 
