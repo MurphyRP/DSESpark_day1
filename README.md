@@ -10,9 +10,10 @@ We will start with loading a dataset through simple insert statements (loading w
 2) Insert a starter set of location data
     https://github.com/MurphyRP/DSESpark_day1/blob/master/data/locationSmall.txt
     
-3) Use dsetool to determine (and note) the IP (external IP) of the Master node
-
-   ```<installdir>/bin/dsetool sparkmaster```
+3) Use dsetool to determine (and note) the IP (external IP) of the Master node 
+```
+<installdir>/bin/dsetool sparkmater
+```
     
 4) Open the Spark-SQL shell
 ``` sudo <installdir>/bin/dse spark-sql ```
@@ -75,7 +76,9 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 4) What is the highest site in (in this small set) 'AZ'?
 
     You don't need this but...
-    ``` select * from bootcamp.us_locations where state_alpha = 'AZ' order by elevation_in_ft desc limit 1;```
+```ruby
+select * from bootcamp.us_locations where state_alpha = 'AZ' order by elevation_in_ft desc limit 1;
+```
 
 5) Why are you running simple Spark-SQL? Why would anyone need Spark-SQL with DSE/Cassandra?
 
@@ -85,7 +88,7 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 
 1) Open Spark 
 
-    ``` sudo <installdir>/bin/dse spark-sql -total-executor-cores 2 ```
+``` sudo <installdir>/bin/dse spark -total-executor-cores 2 ```
     
     A) What contexts are available?
     B) For DSE 4.8 and earlier version users, what is different?
@@ -95,7 +98,54 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
     A) What applications are running?
     B) Is there anything different than when we were running the Spark-SQL shell?
     C) Why do these applications not 'stop' running?
+    
+3) Think DAG! (Directed Acyclic Graph) https://en.wikipedia.org/wiki/Directed_acyclic_graph
 
+4) Run 
+```scala
+val firstTest = 10;
+```
+Note:  '=' is an Assignment Operator in Scala (and most languages)
+
+    A) What is the output?
+    B) You wrote Scala!
+    C) How do you print the value to the prompt? Think Scala.
+
+4) Run
+```scala
+val resCount = sqlContext.sql("select count(*) from bootcamp.us_locations")
+```
+
+    A)What was the output? How was this different than the 'firstTest' assignment?
+    B)What is resCount?
+5) Run
+```scala
+println(resCount)
+```
+    A) What was the output?
+    B) Why was no value printed?
+    
+6) Run
+```scala
+resCount.take(1)
+```
+    A) Did it take longer than the println?
+    B) What was the output?
+    
+7) Run
+```scala
+val resFull = sqlContext.sql("select * from bootcamp.us_locations")
+```
+    A) What was the output?
+    
+8) Run
+```scala
+resFull.printSchema()
+```
+
+    A) What is the output?
+    B) Has data been retrieved from Cassandra yet? Why (yes or no)?
+    
 
 
 
