@@ -10,7 +10,9 @@ We will start with loading a dataset through simple insert statements (loading w
 2) Insert a starter set of location data
     https://github.com/MurphyRP/DSESpark_day1/blob/master/data/locationSmall.txt
     
-3) Run ```<installdir>/bin/dsetool sparkmaster``` and note the IP (external IP) of the Master node
+3) Use dsetool to determine (and note) the IP (external IP) of the Master node
+
+   ```<installdir>/bin/dsetool sparkmaster```
     
 4) Open the Spark-SQL shell
 ``` sudo <installdir>/bin/dse spark-sql ```
@@ -38,6 +40,7 @@ We will start with loading a dataset through simple insert statements (loading w
     B) Why?
     
 9) Close the second Spark-SQL sesion and reopen with configuration change.
+
 ``` sudo <installdir>/bin/dse spark-sql -total-executor-cores 2 ```
 
 10) Refresh the Master UI 
