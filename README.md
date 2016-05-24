@@ -56,9 +56,19 @@ We will start with loading a dataset through simple insert statements (loading w
     
 12) When would you want to set system-wide defaults for these settings?
 
-```http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sparkCassProps.html```
+http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sparkCassProps.html
 
 ## Simple data exploration
 
+1) Let's look at our table in the Spark-SQL CLI
+``` Describe bootcamp.us_locations ```
+
+2) How many rows are in the table?
+
+3) How many 'sites' are in 'CA'?
+
+4) What is the highest site in 'CA'?
+
+5) Why are you running simple Spark-SQL? What does itselec
 
 
