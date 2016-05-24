@@ -250,6 +250,13 @@ cd
 wget https://raw.githubusercontent.com/MurphyRP/DSESpark_day1/master/simplePySubmit.py
 ```
 
+2) Submit the python file to Spark.
+```
+sudo <installDir>/bin/dse spark-submit ~/simplePySubmit.py
+```
+    A) What happened?
+    B) "DSE Submit" wraps the submit in the correct DSE context and provides the spark master url
+    C) Where would submit be more appropriate than the CLI?
 
 https://github.com/datastax/spark-cassandra-connector/blob/master/doc/14_data_frames.md
 
