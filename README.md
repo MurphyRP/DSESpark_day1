@@ -67,8 +67,15 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 
 3) How many 'sites' are in 'CA'?
 
-4) What is the highest site in 'CA'?
+4) What states are in the table?
 
-5) Why are you running simple Spark-SQL? What does itselec
+4) What is the highest site in (in this small set) 'AZ'?
+
+    You don't need this but...
+    ``` select * from bootcamp.us_locations where state_alpha = 'AZ' order by elevation_in_ft desc limit 1;```
+
+5) Why are you running simple Spark-SQL? Why would anyone need Spark-SQL with DSE/Cassandra?
+
+6) Where might an ad-hoc 'interface' to Cassandra via Spark make more sense? Does CLI sound like a common usage pattern?
 
 
