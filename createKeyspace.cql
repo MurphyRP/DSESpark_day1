@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS bootcamp.us_locations (
 	source_lat_dec varchar,
 	source_long_dec varchar,
 	elevation_in_miles float,
-	election_in_ft int,
+	elevation_in_ft int,
 	map_name varchar,
 	date_created timestamp,
 	date_edited timestamp)	
