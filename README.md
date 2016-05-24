@@ -60,7 +60,10 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 
 ## Simple data exploration
 
+### Spark-SQL CLI
+
 1) Let's look at our table in the Spark-SQL CLI
+
 ``` Describe bootcamp.us_locations ```
 
 2) How many rows are in the table?
@@ -77,5 +80,22 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 5) Why are you running simple Spark-SQL? Why would anyone need Spark-SQL with DSE/Cassandra?
 
 6) Where might an ad-hoc 'interface' to Cassandra via Spark make more sense? Does CLI sound like a common usage pattern?
+
+### Spark CLI
+
+1) Open Spark 
+
+    ``` sudo <installdir>/bin/dse spark-sql -total-executor-cores 2 ```
+    
+    A) What contexts are available?
+    B) For DSE 4.8 and earlier version users, what is different?
+    
+2) Refresh the Spark Master UI
+
+    A) What applications are running?
+    B) Is there anything different than when we were running the Spark-SQL shell?
+    C) Why do these applications not 'stop' running?
+
+
 
 
