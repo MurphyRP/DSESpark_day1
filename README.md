@@ -174,7 +174,56 @@ http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.Da
 
 #### Writing to Cassandra
 
-1) Use ... to create a simple States table
+1) Create a simple States table with:
+https://github.com/MurphyRP/DSESpark_day1/blob/master/createStateTable.cql 
+
+2) Run
+```scala
+val states = sqlContext.sql("select distinct(state_alpha) from bootcamp.us_locations")
+```
+    A) Take a look at the contents. .show() is appropriate here
+    
+3) Run
+```scala
+states.write.format("org.apache.spark.sql.cassandra").options(Map( "table" -> "states", "keyspace" -> "bootcamp")).save()
+```
+    A) What was written to Cassandra?
+    
+4) In CQLSH or DevCenter, run
+```
+update bootcamp.states set state_name = 'Arizona' where state_alpha = 'AZ';
+update bootcamp.states set state_name = 'Colorado' where state_alpha = 'CO';
+```
+5) in Scala CLI run
+```scala
+val statesFromCass = sqlContext.sql("select state_alpha, state_name from bootcamp.states")
+
+statesFromCass.registerTempTable("statesList")
+
+resFull.registerTempTable("us_locations")
+
+val arizonaHighPoint = sqlContext.sql("select feature_name, s.state_name from statesList s inner join locations l on s.state_alpha = l.state_alpha and l.state_alpha = 'AZ' order by elevation_in_ft desc") 
+```
+
+    A) What was created?
+    B) Has data been retrieved from Cassandra? Why (yes or no)?
+
+6) Run
+```scala
+arizonaHighPoint.take(1)
+```
+
+    A) What just happened?
+    B) What was the output? Was it as expected?
+    C) How long did it take?
+
+
+
+
+
+
+https://github.com/datastax/spark-cassandra-connector/blob/master/doc/14_data_frames.md
+
 
 
 
