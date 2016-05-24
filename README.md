@@ -1,5 +1,7 @@
 # DSE Analytics - DAY ONE
 
+## Getting started, resources and Spark Applications
+
 We will start with loading a dataset through simple insert statements (loading with Spark will come!)
 
 1 ) Create the keyspace and table 
@@ -14,7 +16,7 @@ We will start with loading a dataset through simple insert statements (loading w
 ``` sudo <installdir>/bin/dse spark-sql ```
 
 5) Go to the Spark Master UI  
-    ```http://<master ip>:7080
+    ```http://<master ip>:7080 ```
     
     A) What applications are running?
     B) How many cores are being used per node? Per cluster?
@@ -49,7 +51,7 @@ We will start with loading a dataset through simple insert statements (loading w
 
     A) Any change to the observed behavior above?
 
-    
+## Simple data exploration
 
 
 
