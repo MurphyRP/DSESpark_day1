@@ -244,10 +244,10 @@ arizonaHighPoint.show()
 ```
 https://github.com/MurphyRP/DSESpark_day1/blob/master/simplePySubmit.py
 ```
-Maybe cd into your home dir and then wget?
+Maybe cd into your home dir and then wget? **Note: wget from GITHub does not use the same URL as the Git UI**
 ```
 cd
-wget https://github.com/MurphyRP/DSESpark_day1/blob/master/simplePySubmit.py
+wget https://raw.githubusercontent.com/MurphyRP/DSESpark_day1/master/simplePySubmit.py
 ```
 
 
