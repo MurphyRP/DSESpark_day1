@@ -172,5 +172,11 @@ Sort is an alias of group by. Spark often provides a 'sql knowledge' friendly al
 
 http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.DataFrame
 
+#### Writing to Cassandra
+
+1) Use ... to create a simple States table
+
+
+
 
 
