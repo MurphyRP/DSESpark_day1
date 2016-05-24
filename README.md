@@ -1,4 +1,4 @@
-# DSE Analytics - DAY ONE
+## DSE Analytics - Introduction
 
 ## Getting started, resources and Spark Applications
 
