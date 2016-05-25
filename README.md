@@ -42,7 +42,7 @@ We will start with loading a dataset through simple insert statements (loading w
     
 9) Close the second Spark-SQL sesion and reopen with configuration change.
 
-``` sudo <installdir>/bin/dse spark-sql -total-executor-cores 2 ```
+``` sudo <installdir>/bin/dse spark-sql --total-executor-cores 2 ```
 
 10) Refresh the Master UI 
 
@@ -65,7 +65,14 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 
 1) Let's look at our table in the Spark-SQL CLI
 
-``` Describe bootcamp.us_locations ```
+Open Spark CLI
+``` 
+sudo <installdir>/dse spark
+```
+Run
+```
+Describe bootcamp.us_locations 
+```
 
 #### Brush off your SQL - in this case SparkSQL
 
