@@ -65,10 +65,7 @@ http://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/spark/sp
 
 1) Let's look at our table in the Spark-SQL CLI
 
-Open Spark CLI
-``` 
-sudo <installdir>/dse spark
-```
+
 Run
 ```
 Describe bootcamp.us_locations 
